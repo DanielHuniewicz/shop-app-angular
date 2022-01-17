@@ -1,0 +1,12 @@
+.cart-list-page{
+    mat-card{
+        width: 70%;
+    }
+
+    @media screen and (max-width: 800px) {
+        mat-card{
+            width: 90%;
+        }
+    }
+}
+

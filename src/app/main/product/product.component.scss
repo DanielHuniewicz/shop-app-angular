@@ -1,0 +1,45 @@
+.product-card{
+    width: 30%;
+    margin: auto;
+    padding: 50px;
+    position: relative;
+
+    img{
+        // margin: 20px;
+        width: 60%;
+        margin: 5% 0 5% 20%;
+    }
+
+    &__next{
+        position: absolute;
+        right: -100px;
+        top: 45%;
+    }
+
+    &__prev{
+        position: absolute;
+        left: -100px;
+        top: 45%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .product-card{
+        width: 85%;
+        padding: 20px;
+    
+        &__next{
+            position: absolute;
+            right:  30%;
+            bottom: -80px;
+            top: unset;
+        }
+    
+        &__prev{
+            position: absolute;
+            left: 30%;
+            bottom: -80px;
+            top: unset;
+        }
+    }
+}

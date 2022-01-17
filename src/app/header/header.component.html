@@ -1,0 +1,48 @@
+<header>
+    <div *ngIf="getScreenWidth > 800 ;else mobile_content" class="main-header">
+        <div class="main-header__logo">
+            <a routerLink="/">
+                <img src="../../assets/images/logo-example.png" alt=""> 
+            </a>
+        </div>
+        <nav class="main-header__nav">
+            <a routerLink="/">
+                <button mat-stroked-button color="primary">Products</button>   
+            </a>
+            <a routerLink="carts">
+                <button mat-stroked-button color="primary">Carts</button>   
+            </a>
+        </nav>
+       
+        <button mat-stroked-button color="warn" class="main-header__logout" (click)="onLogout()">Log-out</button>   
+    </div>
+    
+    <ng-template #mobile_content>
+        <mat-accordion class="main-header-mobile">
+            <mat-expansion-panel>
+              <mat-expansion-panel-header>
+                <mat-panel-title>
+                    <div class="main-header__logo">
+                        <a routerLink="/">
+                            <img src="../../assets/images/logo-example.png" alt=""> 
+                        </a>
+                    </div>
+                </mat-panel-title>
+              </mat-expansion-panel-header>
+                <div>
+                    <a routerLink="/">
+                        <button mat-button color="primary">Products</button>   
+                    </a>
+                </div>
+                <div>
+                    <a routerLink="carts">
+                        <button mat-button color="primary">Carts</button>   
+                    </a>
+                </div>
+                <div>
+                    <button mat-button color="warn" class="main-header__logout" (click)="onLogout()">Log-out</button>   
+                </div>
+            </mat-expansion-panel>
+          </mat-accordion>
+    </ng-template>
+</header>

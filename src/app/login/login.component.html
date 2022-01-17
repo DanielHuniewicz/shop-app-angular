@@ -1,0 +1,28 @@
+<div class="login-page">
+    <div class="login-form">
+
+        <div class="login-form__logo">
+            <img src="../../assets/images/logo-example.png" alt="logo"> 
+        </div>
+
+        <mat-card class="login-form__card">
+            <mat-toolbar color="primary">
+                Login Panel
+            </mat-toolbar>
+            <form fxLayoutAlign="streych" fxLayout="column" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    
+                <mat-form-field>
+                    <input matInput placeholder="mail@example.com" name="email" [formControl]="email" ngModel required>
+                    <mat-error *ngIf="email.invalid">{{getErrorMessageEmail()}}</mat-error>
+                </mat-form-field>
+    
+                <mat-form-field>
+                    <input matInput type="password" placeholder="Password" name="password" [formControl]="password" ngModel required>
+                    <mat-error *ngIf="password.invalid">{{getErrorMessagePassword()}}</mat-error>
+                </mat-form-field>
+    
+                <button mat-raised-button type="submit">Login</button>
+            </form>
+        </mat-card>
+    </div>
+</div>

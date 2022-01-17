@@ -1,0 +1,34 @@
+<div class="cart-list-page">
+    <div fxLayoutAlign="center">
+        <mat-card>
+            <mat-toolbar color="primary">
+                Carts list
+            </mat-toolbar>
+            <mat-accordion>
+    
+                <div *ngIf="isLoading" class="default-spinner">
+                    <mat-progress-spinner 
+                        color="primary" 
+                        mode="indeterminate">
+                    </mat-progress-spinner>
+                </div>
+    
+                <mat-expansion-panel hideToggle *ngFor="let cart of results">
+                  <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{cart.name.firstname}} {{cart.name.lastname}}
+                    </mat-panel-title>
+                    <mat-panel-description>
+                        {{cart.date | date}} 
+                    </mat-panel-description>
+                    </mat-expansion-panel-header>
+                    <p *ngFor="let product of cart.products">
+                        <a routerLink="/product/{{product.productId}}">
+                            {{product.title}}
+                        </a>
+                    </p>
+                </mat-expansion-panel>
+            </mat-accordion>
+        </mat-card>
+    </div>
+</div>

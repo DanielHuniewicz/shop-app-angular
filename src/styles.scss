@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+}
+
+.default-spinner{
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    background: white;
+    padding: 10% 0;
+}

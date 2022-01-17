@@ -1,0 +1,31 @@
+.product-list-page{
+    mat-card{
+        min-height: 600px;
+        width: 70%;
+
+        .product-list{
+            &__item{
+                &--id{
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        mat-card{
+            width: 90%;
+
+            mat-toolbar{
+                margin-bottom: 10px;
+            }
+    
+            .product-list{
+                mat-list-item{
+                    height: auto;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}

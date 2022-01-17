@@ -1,0 +1,21 @@
+<div class="product-list-page">
+    <div fxLayoutAlign="center">
+        <mat-card>
+            <mat-toolbar color="primary">
+                Products list
+            </mat-toolbar>
+            <mat-list role="list" class="product-list">
+                <mat-list-item role="listitem" 
+                *ngFor="let product of list"
+                class="product-list__item">
+    
+                    <a routerLink="product/{{product.id}}">
+                        <span class="product-list__item--id">{{product.id}}</span>
+                        <span class="product-list__item--title">{{product.title}}</span>
+                    </a>
+                    
+                </mat-list-item>
+            </mat-list>
+        </mat-card>
+    </div>
+</div>
